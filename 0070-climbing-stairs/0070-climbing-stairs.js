@@ -16,8 +16,13 @@ var climbStairs = function(n) {
     if (n <= 0) {
         return 0;
     }
-
-    dp.set(n, climbStairs(n - 1) + climbStairs(n - 2));
     
-    return dp.get(n);
+    const first = climbStairs(n - 1);
+    const second = climbStairs(n - 2)
+    
+    dp.set(n - 1, first);
+
+    dp.set(n - 2, second);
+    
+    return dp.get(n - 1) + dp.get(n - 2);
 };
