@@ -16,8 +16,6 @@ class Solution {
                 result.add(current);
             }
         }
-        int[][] a = new int[5][];
-        a[0] = new int[5];
 
         return result.toArray(new int[result.size()][]);
     }
